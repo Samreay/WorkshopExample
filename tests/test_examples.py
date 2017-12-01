@@ -5,7 +5,7 @@ import pytest
 # Basic test functions are fun
 def test_assertion_example():
     assert 1 == 1
- 
+
 
 def test_expected_error_example():
     with pytest.raises(AssertionError):
