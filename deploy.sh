@@ -10,7 +10,7 @@ if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"/doc
     make clean
     make html
-    if [ "$TRAVIS_PYTHON_VERSION" != "3.6" ]; then
+    if [ "$TRAVIS_PYTHON_VERSION" == "3.6" ]; then
         cd "$TRAVIS_BUILD_DIR"
         rm -rf .git/
         cd doc/_build/html
