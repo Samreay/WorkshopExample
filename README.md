@@ -21,3 +21,16 @@ To use this framework you will need to:
 4. Enable Travis, CodeCov and Codacy. (You may need to make a commit and push after enabling travis to kick off a build.)
 5. Update the codacy badge in this readme because it uses more than username/repo (get the badge from codacy project settings).
 6. Set an environment variable in travis called GITHUB_API_KEY with a Personal Access Token to commit Sphinx html to public repos.
+
+Steps for how this project was set up can be found in the `Presentation.pdf` file in this repository, which was 
+presented in December 2017 for the CAASTRO Code Workshops.
+
+-----------
+
+With Travis, CodeCov and Codacy set up, tests will run, cod style will be analyses, and documentation rebuilt, on each commit.
+
+If you do not enable travis, you can run the tests your self by running (in the top level directory):
+
+`pytest -v --cov=.` for \*nix, and `python -m pytest -v --cov=.`
+
+You can build documentation yourself by navigating to the `doc` directory, and running `make clean && make html`, which will build the HTML builds in the `doc/_build/html` directory. Open `index.html` in that directory to see the documentation. 
